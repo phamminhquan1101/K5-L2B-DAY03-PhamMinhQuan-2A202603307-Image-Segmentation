@@ -65,4 +65,4 @@ Mỗi ca là một **vùng cụ thể** khiến bạn phải cân nhắc hai cá
 
 **Đánh giá và giới hạn.** Công cụ hướng tới giảm thao tác vẽ biên bằng tay và cho phép sửa gợi ý bằng point/brush. Hiện mới đo độ trễ kỹ thuật, **chưa đo thời gian vẽ tay so với dùng SAM nên chưa kết luận phần trăm tăng năng suất**. Chưa kiểm chứng thao tác click/xác nhận/Save trực tiếp trên trình duyệt do công cụ điều khiển Chrome không xác định được URL. Confidence của SAM không được dùng làm mIoU hoặc điểm bài. Khi dùng trong bài, tôi vẫn phải kiểm class, biên, số object và tuân thủ yêu cầu tự vẽ object Medium đầu tiên trước gợi ý.
 
-**Minh chứng và cách tái hiện:** [mã triển khai và hướng dẫn](../../integrations/cvat-sam/README.md), [báo cáo kỹ thuật](../sam/README.md), [ảnh overlay mask thật](../sam/evidence/point-mask-overlay.jpg), [JSON gọi CVAT](../sam/evidence/cvat-api-verification.json), [số liệu HTTP dạng CSV](../sam/measurements.csv). Checkpoint, Docker image và cache được giữ local, không đưa vào Git.
+**Cách tái hiện:** Xem [mã triển khai và hướng dẫn](../../integrations/cvat-sam/README.md). Checkpoint, Docker image và cache được giữ local, không đưa vào Git.
