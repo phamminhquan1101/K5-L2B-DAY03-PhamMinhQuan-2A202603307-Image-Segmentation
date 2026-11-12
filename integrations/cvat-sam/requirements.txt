@@ -1,0 +1,8 @@
+# torch/torchvision are installed separately from the selected CPU/CUDA index.
+numpy==1.26.4
+Pillow==10.4.0
+opencv-python-headless==4.10.0.84
+timm==0.6.13
+huggingface-hub==0.26.5
+PyYAML==6.0.2
+safetensors==0.4.5

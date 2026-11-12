@@ -1,0 +1,12 @@
+*
+!Dockerfile
+!requirements.txt
+!weights/
+!weights/mobile_sam.pt
+!nuclio/
+!nuclio/mobilesam/
+!nuclio/mobilesam/*.py
+!tests/
+!tests/*.py
+!scripts/
+!scripts/smoke-test.py

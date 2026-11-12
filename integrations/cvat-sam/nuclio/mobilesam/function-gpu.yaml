@@ -1,0 +1,39 @@
+metadata:
+  name: pth-mobilesam-local
+  namespace: cvat
+  annotations:
+    name: MobileSAM Local (points)
+    version: 2
+    type: interactor
+    spec: '[]'
+    min_pos_points: 1
+    min_neg_points: 0
+    help_message: Select a label, add positive points inside the object and negative points outside, then finish the mask.
+spec:
+  description: Local MobileSAM point segmentation on GPU; one worker and one cached image.
+  runtime: python:3.10
+  handler: main:handler
+  eventTimeout: 60s
+  env:
+    - name: PYTHONPATH
+      value: /opt/nuclio
+    - name: MOBILESAM_DEVICE
+      value: cuda
+  build:
+    image: cvat.mobilesam.local:gpu
+    baseImage: cvat.mobilesam.base:gpu
+  resources:
+    limits:
+      nvidia.com/gpu: 1
+  triggers:
+    http:
+      kind: http
+      numWorkers: 1
+      workerAvailabilityTimeoutMilliseconds: 60000
+      attributes:
+        maxRequestBodySize: 33554432
+  platform:
+    attributes:
+      restartPolicy:
+        name: unless-stopped
+      mountMode: volume
